@@ -5,20 +5,11 @@
 <!--    <color name="colorAccent">#FFC107</color>-->
 <!--    <color name="colorAccent">#00BFA6</color>-->
     <color name="colorAccent">#00BFA6</color>
-    <color name="bg">#E7E8E8</color>
     <color name="white">#ffffff</color>
-    <color name="red_pink">#ff564c</color>
-    <color name="red_pink_alpha">#aaff564c</color>
-    <color name="drop">#3e2723</color>
 
-    <color name="primary">#aa4CAF50</color>
-    <color name="amber">#E6BF00</color>
     <color name="primary_dark">#00BFA6</color>
     <color name="textColor">#212121</color>
-    <color name="textColor_alpha">#aa212121</color>
-    <color name="secondary_text">#00BFA6</color>
 
     <!--SWITCH COLORS-->
 
-    <color name="disable_thumb_grey">#1c000000</color>
 </resources>

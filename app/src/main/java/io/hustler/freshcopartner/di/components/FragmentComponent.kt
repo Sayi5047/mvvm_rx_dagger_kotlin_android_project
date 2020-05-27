@@ -11,15 +11,6 @@ import io.hustler.freshcopartner.ui.home.frags.OrdersFragment
 import dagger.Component
 import io.hustler.freshcopartner.di.modules.FragmentModule
 
-//import ph.bilidito..driver.di.modules.FragmentModule
-
-////import ph.bilidito..driver.di.modules.FragmentModule
-////import ph.bilidito..driver.di.scopes.ActivityScope
-////import ph.bilidito..driver.di.scopes.FragmentScope
-////import ph.bilidito..driver.ui.home.fragments.EarningsFragmentV2
-////import ph.bilidito..driver.ui.home.fragments.HomeFragment
-////import ph.bilidito..driver.ui.home.fragments.TripsFragmentV2
-
 @Component(dependencies = [ApplicationComponent::class], modules = [FragmentModule::class])
 @FragmentScope
 @ActivityScope
