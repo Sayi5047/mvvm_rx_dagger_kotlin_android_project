@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@android:color/white"
+    tools:context=".v1.fragments.HomeFragment">
+
+    <!-- TODO: Update blank productsFragment layout -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/kyc_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/navigation_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16"
+                        android:clipChildren="true"
+                        android:clipToPadding="true"
+                        app:cardCornerRadius="@dimen/margin_8">
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/addressCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16"
+                        android:clipChildren="true"
+                        android:clipToPadding="true"
+                        app:cardCornerRadius="@dimen/margin_8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="@dimen/padding_16"
+                                android:text="@string/Address"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_14" />
+
+                            <TextView
+                                android:id="@+id/kyc_address_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/padding_16"
+                                android:text="@string/dummyAddress"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text_14" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/wayz"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="@dimen/margin_36"
+                                    android:layout_below="@id/navgation_name"
+                                    android:layout_toEndOf="@id/maps"
+                                    android:src="@drawable/ic_wayz"
+
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/maps"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_8"
+                                    android:layout_marginBottom="@dimen/margin_8"
+                                    android:layout_height="@dimen/margin_36"
+                                    android:layout_below="@id/navgation_name"
+                                    android:src="@drawable/ic_navigation" />
+
+                                <ImageView
+                                    android:id="@+id/calls"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/padding_4"
+                                    android:layout_height="@dimen/margin_36"
+                                    android:layout_below="@id/navgation_name"
+                                    android:src="@drawable/ic_call_black_24dp" />
+
+                                <ImageView
+                                    android:id="@+id/staticMapsView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_below="@id/maps"
+                                    android:visibility="gone"
+                                    android:padding="@dimen/padding_8"
+                                    android:background="@drawable/rounded_rect_bbg" />
+
+                                <TextView
+                                    android:id="@+id/navgation_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimaryDark"
+                                    android:padding="@dimen/padding_16"
+                                    android:text="@string/Navigation"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_14"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/kyc_details_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_16"
+                        android:clipChildren="true"
+                        android:clipToPadding="true"
+                        app:cardCornerRadius="@dimen/margin_8">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimaryDark"
+                                android:padding="@dimen/padding_16"
+                                android:text="@string/verificationdocuments"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_14" />
+
+                            <TextView
+                                android:id="@+id/documents_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/padding_16"
+                                android:text="@string/documentsList"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="@dimen/text_14" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <RelativeLayout
+                android:id="@+id/history_data_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/error_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/image_view"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_above="@id/error_message"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_local_shipping_black_24dp"
+                        android:tint="#000000" />
+
+                    <TextView
+                        android:id="@+id/error_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/padding_16"
+                        android:text="No orders available yet"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_28" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_completed_order_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/current_order_layout"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_4"
+                    android:text="@string/completed_orders"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_19"
+
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_current_order_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_8"
+                    android:text="@string/ORDERS"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_19"
+
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/completed_order_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_completed_order_heading"
+                    android:visibility="visible" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/current_order_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_current_order_heading"
+                    android:layout_marginBottom="@dimen/margin_4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/offlineScreen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/sadFace"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_sentiment_dissatisfied_black_24dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/sadFacetext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sadFace"
+                    android:padding="@dimen/padding_16"
+                    android:text="@string/you_are_offline_please_become_online_to_get_trip_request"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_19" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tripDetailsScreen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <ScrollView
+                    android:id="@+id/trip_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/tripLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/mapView"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginRight="@dimen/margin_16"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginLeft="@dimen/margin_16"
+                            android:visibility="gone"
+                            android:background="@color/shimmer_color" />
+
+                        <TextView
+                            android:id="@+id/trip_details_headding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Trip Details"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            android:textSize="@dimen/text_19"
+                            android:layout_below="@id/mapView"
+                            android:paddingStart="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/statusText"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Status"
+                            android:visibility="gone"
+
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_14"
+                            android:alpha="0.5"
+                            android:layout_below="@id/trip_details_headding"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/statusValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/trip_details_headding"
+                            android:layout_toEndOf="@id/statusText"
+                            android:visibility="gone"
+
+                            android:text="Ongoing"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_17"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8"
+                            android:textColor="@color/colorAccent" />
+
+                        <TextView
+                            android:id="@+id/tripIdText"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Trip Id"
+                            android:visibility="gone"
+
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_14"
+                            android:alpha="0.5"
+                            android:layout_below="@id/statusText"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/tripIdValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/statusText"
+                            android:layout_toEndOf="@id/statusText"
+                            android:visibility="gone"
+
+                            android:text="1"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_17"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/task_details_headding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Task Details"
+                            android:textStyle="bold"
+
+                            android:textSize="@dimen/text_19"
+                            android:layout_below="@id/tripIdValue"
+                            android:paddingStart="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/otpView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Otp : 56269"
+                            android:background="@drawable/rounded_rect_blue"
+                            android:textColor="@color/white"
+                            android:layout_alignParentEnd="true"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:paddingTop="@dimen/padding_4"
+                            android:paddingBottom="@dimen/padding_4"
+                            android:layout_marginEnd="@dimen/margin_16"
+                            android:layout_marginStart="@dimen/margin_8"
+                            android:layout_below="@id/tripIdValue"
+                            android:layout_marginTop="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/taskIDText"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Task id"
+                            android:visibility="gone"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_14"
+                            android:alpha="0.5"
+                            android:layout_below="@id/task_details_headding"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/taskIDValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/task_details_headding"
+                            android:layout_toEndOf="@id/statusText"
+                            android:visibility="gone"
+                            android:text="2"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_17"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8"
+                            android:layout_marginEnd="@dimen/margin_4" />
+
+                        <TextView
+                            android:id="@+id/taskTypeText"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Order Id"
+
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_14"
+                            android:visibility="visible"
+                            android:alpha="0.5"
+                            android:layout_below="@id/taskIDValue"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/taskTypeValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/task_details_headding"
+                            android:layout_toEndOf="@id/taskTypeText"
+                            android:visibility="visible"
+                            android:text="Pickup"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_17"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8"
+                            android:layout_marginEnd="@dimen/margin_4" />
+
+                        <View
+                            android:id="@+id/spaceView"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/taskTypeText"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:background="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/addressText"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Address"
+
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_14"
+                            android:alpha="0.5"
+                            android:layout_below="@id/spaceView"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/addressValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/spaceView"
+                            android:layout_toEndOf="@id/addressText"
+
+                            android:text="@string/address"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_17"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8"
+                            android:layout_marginEnd="@dimen/margin_4" />
+
+                        <TextView
+                            android:id="@+id/storeNameText"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/StoreName"
+
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_14"
+                            android:alpha="0.5"
+                            android:layout_below="@id/addressValue"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/storeNameValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/addressValue"
+                            android:layout_toEndOf="@id/addressText"
+
+                            android:text="Hammered Store"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_17"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8"
+                            android:layout_marginEnd="@dimen/margin_4" />
+
+                        <TextView
+                            android:id="@+id/cityText"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="City"
+
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_14"
+                            android:alpha="0.5"
+                            android:layout_below="@id/storeNameValue"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/cityValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/storeNameValue"
+                            android:layout_toEndOf="@id/addressText"
+
+                            android:text="Bangalore"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_17"
+                            android:paddingStart="@dimen/padding_8"
+                            android:visibility="gone"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8"
+                            android:layout_marginEnd="@dimen/margin_4" />
+
+                        <TextView
+                            android:id="@+id/zipText"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Zipcode"
+
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_14"
+                            android:alpha="0.5"
+                            android:layout_below="@id/cityText"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <TextView
+                            android:id="@+id/zipValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cityText"
+                            android:layout_toEndOf="@id/addressText"
+
+                            android:text="516341"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_17"
+                            android:paddingStart="@dimen/padding_8"
+                            android:paddingEnd="@dimen/padding_8"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8"
+                            android:layout_marginEnd="@dimen/margin_4" />
+
+                        <View
+                            android:id="@+id/spaceView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/zipValue"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:background="@color/colorPrimary" />
+
+                        <LinearLayout
+                            android:id="@+id/task_contact_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_below="@id/spaceView2"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/wayz_task"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/margin_36"
+                                android:src="@drawable/ic_wayz"
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/maps_task"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_8"
+                                android:layout_marginBottom="@dimen/margin_8"
+                                android:layout_height="@dimen/margin_36"
+                                android:src="@drawable/ic_navigation" />
+
+                            <ImageView
+                                android:id="@+id/calls_task"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:padding="@dimen/padding_4"
+                                android:layout_height="@dimen/margin_36"
+                                android:src="@drawable/ic_call_black_24dp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/spaceView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/task_contact_layout"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:background="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/products_headding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/Packages"
+                            android:textStyle="bold"
+
+                            android:textSize="@dimen/text_19"
+                            android:layout_below="@id/task_contact_layout"
+                            android:paddingStart="@dimen/padding_8"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8" />
+
+                        <View
+                            android:id="@+id/spaceView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/products_headding"
+                            android:layout_marginTop="@dimen/margin_4"
+                            android:background="@color/colorPrimary"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/products_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/spaceView4"
+                            android:background="@drawable/rounded_rect_white"
+                            android:padding="@dimen/padding_8"
+                            android:layout_margin="@dimen/margin_8">
+
+                            <TextView
+                                android:id="@+id/order_id_head"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Trip Id"
+                                android:layout_marginEnd="@dimen/margin_16"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/text_14"
+                                android:alpha="0.5"
+                                android:layout_alignParentStart="true"
+                                android:paddingStart="@dimen/padding_8"
+                                android:paddingEnd="@dimen/padding_8"
+
+                                android:layout_marginTop="@dimen/margin_8"
+                                android:layout_marginStart="@dimen/margin_8" />
+
+                            <TextView
+                                android:id="@+id/items_count_head"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/items"
+                                android:layout_marginEnd="@dimen/margin_16"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/text_14"
+                                android:layout_centerHorizontal="true"
+                                android:alpha="0.5"
+                                android:paddingStart="@dimen/padding_8"
+                                android:paddingEnd="@dimen/padding_8"
+
+                                android:layout_marginTop="@dimen/margin_8"
+                                android:layout_marginStart="@dimen/margin_8" />
+
+                            <TextView
+                                android:id="@+id/delivery_time_head"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:text="@string/deliverBefore"
+                                android:layout_marginEnd="@dimen/margin_8"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/text_14"
+                                android:alpha="0.5"
+                                android:paddingStart="@dimen/padding_8"
+                                android:paddingEnd="@dimen/padding_8"
+                                android:layout_marginTop="@dimen/margin_8"
+                                android:layout_marginStart="@dimen/margin_8" />
+
+                            <TextView
+                                android:id="@+id/order_id_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="#3453"
+                                android:layout_marginEnd="@dimen/margin_16"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/text_14"
+                                android:layout_below="@id/order_id_head"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_alignParentStart="true"
+                                android:paddingStart="@dimen/padding_8"
+                                android:paddingEnd="@dimen/padding_8"
+                                android:layout_marginBottom="@dimen/margin_8"
+                                android:layout_marginTop="@dimen/margin_8"
+                                android:layout_marginStart="@dimen/margin_8" />
+
+                            <TextView
+                                android:id="@+id/items_count_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/order_id_head"
+                                android:text="32"
+                                android:layout_marginEnd="@dimen/margin_16"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/text_14"
+                                android:layout_centerHorizontal="true"
+                                android:paddingStart="@dimen/padding_8"
+                                android:paddingEnd="@dimen/padding_8"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_marginTop="@dimen/margin_8"
+                                android:layout_marginStart="@dimen/margin_8" />
+
+                            <TextView
+                                android:id="@+id/delivery_time_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/order_id_head"
+                                android:layout_alignParentEnd="true"
+                                android:text="10:45 A.M"
+                                android:layout_marginEnd="@dimen/margin_8"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/text_14"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:paddingStart="@dimen/padding_8"
+                                android:paddingEnd="@dimen/padding_8"
+                                android:layout_marginTop="@dimen/margin_8"
+                                android:layout_marginStart="@dimen/margin_8" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/prducts_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/spaceView4"
+                            android:background="@android:color/transparent"
+                            android:layout_marginTop="@dimen/margin_8"
+                            android:layout_marginStart="@dimen/margin_8"
+                            android:visibility="gone"
+                            android:layout_marginBottom="@dimen/margin_8" />
+
+                        <Button
+                            android:id="@+id/swipe_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/products_card"
+                            android:textColor="@android:color/white"
+                            android:layout_margin="@dimen/margin_16"
+
+                            android:background="@drawable/rounded_rect_positive_button_bg" />
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/acceptCancelLayout"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/padding_8"
+                    android:background="@color/bg"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/pichkoo_view"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        android:id="@+id/cancelTrip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel_trip"
+                        android:background="@drawable/rounded_rect_negative_button_bg"
+                        android:textColor="@color/white"
+                        android:paddingStart="@dimen/padding_8"
+                        android:paddingEnd="@dimen/padding_8"
+                        android:layout_marginEnd="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_toStartOf="@id/pichkoo_view" />
+
+                    <Button
+                        android:id="@+id/startTrip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_trip"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:background="@drawable/rounded_rect_positive_button_bg"
+                        android:textColor="@color/white"
+                        android:paddingStart="@dimen/padding_8"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:paddingEnd="@dimen/padding_8"
+                        android:layout_toEndOf="@id/pichkoo_view" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/online_message_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/onlineFace"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_gravity="center"
+                        android:layout_centerInParent="true"
+
+                        android:src="@drawable/ic_local_shipping_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/onlineFacetext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/onlineFace"
+                        android:padding="@dimen/padding_16"
+                        android:text="@string/looking_for_trip_request"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_19" />
+
+                    <Button
+                        android:id="@+id/requestedTrips"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show Requested Trips"
+                        android:layout_below="@id/onlineFacetext"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/rounded_rect_blue"
+                        android:padding="@dimen/padding_8"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>

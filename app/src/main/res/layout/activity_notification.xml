@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/history_data_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/margin_8"
+    android:background="@color/colorPrimary"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    app:cardCornerRadius="@dimen/margin_8"
+    tools:context=".v1.Activities.NotificationActivity">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/white"
+        android:layoutAnimation="@anim/layout_anim_climb_up">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_image_pickup_vector"
+            android:padding="@dimen/padding_32"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/headding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/padding_16"
+            android:text="New Trip Available"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_anim_view"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_below="@id/headding"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_16"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/lottie_alert_vector" />
+
+        <ImageView
+            android:id="@+id/pickup_truck_iv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/headding"
+            android:layout_margin="@dimen/margin_16"
+            android:padding="@dimen/padding_4"
+            android:src="@drawable/ic_warehouse"
+            android:tint="@color/colorPrimary"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/pickupCount_tv_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headding"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_toStartOf="@id/lottie_anim_view"
+            android:layout_toEndOf="@id/pickup_truck_iv"
+            android:padding="@dimen/padding_8"
+            android:text="@string/number_of_pickups"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/drop_truck_iv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/pickup_truck_iv"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:padding="@dimen/padding_4"
+            android:src="@drawable/ic_retailer"
+            android:tint="@color/colorPrimary"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dropCount_tv_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pickupCount_tv_head"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_toStartOf="@id/lottie_anim_view"
+            android:layout_toEndOf="@id/pickup_truck_iv"
+            android:padding="@dimen/padding_8"
+            android:text="@string/number_of_drops"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/trip_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lottie_anim_view"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@drawable/rounded_rect_negative_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/padding_8"
+            android:text="Oops..Trip already has been Assigned to another driver"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_20"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/pichkoo_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/lottie_anim_view"
+
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin_4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trip_message"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/reject_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_36"
+                android:layout_below="@id/trip_message"
+                android:layout_margin="@dimen/margin_16"
+                android:layout_toStartOf="@id/pichkoo_view"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_rect_negative_button_bg"
+                android:text="@string/ignore"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/accept_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_36"
+                android:layout_below="@id/trip_message"
+                android:layout_margin="@dimen/margin_16"
+                android:layout_toEndOf="@id/pichkoo_view"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_rect_positive_button_bg"
+                android:text="@string/accept"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

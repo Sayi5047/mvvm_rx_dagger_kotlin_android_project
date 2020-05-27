@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipChildren="true"
+    android:animateLayoutChanges="true"
+    android:layoutAnimation="@anim/layout_anim_climb_up"
+    tools:context=".v1.Activities.LoginActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/lottie_bluwaves"
+        app:lottie_loop="true"
+        android:scaleType="centerCrop" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/rounded_rect_full_white"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/head_text"
+        style="@style/text_headding_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_above="@id/signin_form"
+        android:layout_marginStart="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_24"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:selectAllOnFocus="true"
+
+        android:text="@string/Login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signin_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:animateLayoutChanges="true"
+        android:layout_margin="@dimen/margin_8"
+        android:elevation="@dimen/margin_8"
+        android:background="@drawable/rounded_rect_blue"
+        android:clipChildren="false"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:padding="@dimen/padding_16"
+            android:src="@drawable/ic_launcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_16" />
+
+        <LinearLayout
+            android:id="@+id/number_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/rounded_rect_white_blue"
+            android:selectAllOnFocus="true"
+            android:text="@string/dummy_number"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv">
+
+            <TextView
+                android:id="@+id/country_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_16"
+                android:gravity="center"
+                android:text="@string/ph_code"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_17"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/rounded_rect_solid_white"
+                android:hint="@string/mobilenumber"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="@dimen/padding_16"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/head_text" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/rounded_rect_white_blue"
+            android:hint="@string/pin"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:padding="@dimen/padding_16"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/number_layout" />
+
+        <ImageView
+            android:id="@+id/password_eye"
+
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_60"
+            android:src="@drawable/ic_hide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/number_layout" />
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/rounded_rect_white_blue"
+            android:hint="@string/dummy_password"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:padding="@dimen/padding_16"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
+
+        <ImageView
+            android:id="@+id/confirm_password_eye"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_60"
+            android:src="@drawable/ic_hide"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="start"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/cir_progress_bg"
+            android:enabled="true"
+            android:text="@string/login"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm_password"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <TextView
+            android:id="@+id/btn_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login"
+            android:layout_marginTop="@dimen/margin_16"
+            android:padding="@dimen/padding_4"
+            app:layout_constraintVertical_bias="0.2"
+            android:gravity="center" />
+
+
+        <ProgressBar
+            android:id="@+id/loading_progres_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/cir_progress_bg"
+            android:enabled="true"
+            android:text="@string/login"
+            android:textColor="@color/colorPrimary"
+            android:progressTint="@color/colorPrimary"
+            android:progressTintMode="src_in"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm_password"
+            app:layout_constraintVertical_bias="0.2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/cir_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/signin_form"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorAccent"
+        android:visibility="gone" />
+
+</RelativeLayout>

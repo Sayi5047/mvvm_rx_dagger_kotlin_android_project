@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "973808552260",
+    "firebase_url": "https://ourfreshco-e2c10.firebaseio.com",
+    "project_id": "ourfreshco-e2c10",
+    "storage_bucket": "ourfreshco-e2c10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973808552260:android:26acc8c3f43c1e21376f11",
+        "android_client_info": {
+          "package_name": "com.hasteq.ourfreshco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973808552260-bite7l6a2hnj6clgh6kdud0j61c6u96s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hasteq.ourfreshco",
+            "certificate_hash": "62ec967d173964e20dc953ed637a0a0d5c530789"
+          }
+        },
+        {
+          "client_id": "973808552260-gaatvr9t8ao0fgt5eeo79k68o9sknhta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hasteq.ourfreshco",
+            "certificate_hash": "e52b7531ae271256b13be659cb6d6a804d1a5233"
+          }
+        },
+        {
+          "client_id": "973808552260-98ccrsls8v8pvso7vhopfv0ti3jhhj5v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hasteq.ourfreshco",
+            "certificate_hash": "4a73d86582f9f14144158a0c62e69d1051b237df"
+          }
+        },
+        {
+          "client_id": "973808552260-9oliva409lih4ndbihcmqs3kgs4quk4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt-rP5DRWxAhO4XaopGR1tUJeKN0CAljA"
+        },
+        {
+          "current_key": "AIzaSyDrLUIREBKYL9ocho4pJY8KmVPn9QX20r0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973808552260-9oliva409lih4ndbihcmqs3kgs4quk4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973808552260:android:d2b6b3f98a7f4a22376f11",
+        "android_client_info": {
+          "package_name": "io.hustler.freshcopartner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973808552260-9oliva409lih4ndbihcmqs3kgs4quk4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt-rP5DRWxAhO4XaopGR1tUJeKN0CAljA"
+        },
+        {
+          "current_key": "AIzaSyDrLUIREBKYL9ocho4pJY8KmVPn9QX20r0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973808552260-9oliva409lih4ndbihcmqs3kgs4quk4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/margin_4"
+    app:cardUseCompatPadding="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/history_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_4"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/tripId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:drawableStart="@drawable/ic_delivery_truck"
+            android:drawablePadding="@dimen/padding_16"
+            android:padding="@dimen/padding_8"
+            android:text="@string/tripid_200"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_20"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tripPaymentStatus"
+            app:layout_constraintEnd_toStartOf="@id/tripDistance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tripDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:drawableEnd="@drawable/ic_location_on_black_24dp"
+            android:drawablePadding="@dimen/padding_16"
+            android:padding="@dimen/padding_8"
+            android:text="@string/_12_kms"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20"
+            android:textStyle="bold"
+            android:visibility="visible"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tripId"
+            app:layout_constraintBottom_toBottomOf="@id/tripId"/>
+
+        <TextView
+            android:id="@+id/tripPaymentStatus"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tripId"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:drawableStart="@drawable/ic_philippine_peso"
+            android:drawablePadding="@dimen/padding_16"
+            android:gravity="center"
+            android:hint="@string/payment_status_paid"
+            android:padding="@dimen/padding_8"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toTopOf="@id/tripDate"
+            app:layout_constraintEnd_toStartOf="@id/tripAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tripDistance"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/tripAmount"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_below="@id/tripId"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:drawableEnd="@drawable/ic_philippine_peso"
+            android:drawablePadding="@dimen/padding_16"
+            android:gravity="center"
+            android:padding="@dimen/padding_8"
+            android:text="₱ 1300"
+            android:textAlignment="viewEnd"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tripPaymentStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tripPaymentStatus" />
+
+        <TextView
+            android:id="@+id/tripStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_below="@id/tripPaymentStatus"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:drawableEnd="@drawable/ic_trip_status"
+            android:drawablePadding="@dimen/padding_16"
+            android:gravity="center"
+            android:padding="@dimen/padding_8"
+            android:text="@string/completed"
+            android:textAlignment="viewEnd"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tripDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tripDate"
+            app:layout_constraintTop_toTopOf="@id/tripDate" />
+
+        <TextView
+            android:id="@+id/tripDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tripAmount"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="@dimen/padding_16"
+            android:gravity="center"
+            android:hint="@string/fakeDate"
+            android:padding="@dimen/padding_8"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tripStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tripPaymentStatus"
+            tools:ignore="RtlCompat" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

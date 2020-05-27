@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    tools:context=".ui.profile.UpdateProfileActivityV2">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:alpha="0.3"
+        android:src="@drawable/ic_undraw_personal_info_0okl"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/brand_icon"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/logo_height"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:src="@drawable/ic_app_logo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/HeaddingView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:text="@string/Congratulations"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_24"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brand_icon" />
+
+            <TextView
+                android:id="@+id/message_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:padding="@dimen/padding_8"
+                android:text="@string/please_update_profile_details"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/HeaddingView" />
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_margin="@dimen/margin_8"
+                android:background="@drawable/cir_progress_bg"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_undraw_profile_pic_ic5t"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/message_view" />
+
+            <ImageView
+                android:layout_width="@dimen/margin_36"
+                android:layout_height="@dimen/margin_36"
+                android:layout_marginTop="82dp"
+                android:background="@drawable/cir_progress_bg"
+                android:padding="@dimen/padding_4"
+                android:src="@drawable/ic_camera_alt_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/message_view" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_16"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_image">
+
+                <!--L2-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/firstname_hint"
+                    android:textColorHint="@color/textColor_alpha"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_16"
+
+                    app:boxCornerRadiusTopStart="@dimen/margin_16"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="64"
+                    app:counterTextColor="@color/colorAccent"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:startIconDrawable="@drawable/ic_person_white_24dp"
+                    app:startIconTint="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_firstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_56"
+                        android:background="@drawable/rounded_rect_grey"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="64"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/secondary_text" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--L3-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_lastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/last_name_hint"
+                    android:textColorHint="@color/textColor_alpha"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_16"
+                    app:boxCornerRadiusTopStart="@dimen/margin_16"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="64"
+                    app:counterTextColor="@color/colorAccent"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_pin"
+                    app:startIconDrawable="@drawable/ic_person_white_24dp"
+                    app:startIconTint="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_lastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_56"
+                        android:background="@drawable/rounded_rect_grey"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="64"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/secondary_text" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--EMAIL-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/email_field_hint"
+                    android:textColorHint="@color/textColor_alpha"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_16"
+                    app:boxCornerRadiusTopStart="@dimen/margin_16"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="99"
+                    app:counterTextColor="@color/colorAccent"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_lastName"
+                    app:startIconDrawable="@drawable/ic_email_black_24dp"
+                    app:startIconTint="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_56"
+                        android:background="@drawable/rounded_rect_grey"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:maxLength="99"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/secondary_text" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/provinceSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_56"
+                    android:layout_marginBottom="@dimen/margin_4"
+                    android:background="@drawable/rounded_rect_bbg"
+                    android:prompt="@string/province_prompt"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="textStart"
+                    app:layout_constraintTop_toBottomOf="@id/layout_email"
+
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/provinceSpinner_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_56"
+                    android:background="@drawable/rounded_rect_bbg"
+                    android:drawableStart="@drawable/ic_location_on_green_24dp"
+
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:drawablePadding="@dimen/text_16"
+                    android:ellipsize="middle"
+                    android:gravity="start|center"
+                    android:hint="@string/province_prompt"
+                    android:padding="@dimen/text_12"
+                    android:prompt="@string/province_prompt"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor_alpha"
+                    android:textSize="@dimen/text_17"
+                    app:layout_constraintTop_toBottomOf="@id/layout_email"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/zipSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_56"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/rounded_rect_bbg"
+                    android:prompt="@string/province_prompt"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="textStart"
+                    app:layout_constraintTop_toBottomOf="@id/provinceSpinner_text"
+
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/zipSpinner_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_56"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/rounded_rect_bbg"
+                    android:drawableStart="@drawable/ic_location_city_green_24dp"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:drawablePadding="@dimen/text_16"
+                    android:gravity="start|center"
+                    android:hint="@string/zip_prompt"
+                    android:padding="@dimen/text_12"
+                    android:prompt="@string/province_prompt"
+                    android:spinnerMode="dialog"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor_alpha"
+                    android:textSize="@dimen/text_17"
+                    app:layout_constraintTop_toBottomOf="@id/provinceSpinner_text"
+
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_toda_Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:gravity="center"
+                    android:hint="@string/vehicle_plate_toda_number"
+                    android:textColorHint="@color/textColor_alpha"
+
+                    app:boxCornerRadiusTopEnd="@dimen/margin_16"
+                    app:boxCornerRadiusTopStart="@dimen/margin_16"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="16"
+                    app:counterTextColor="@color/colorAccent"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/zipSpinner_text"
+                    app:startIconDrawable="@drawable/ic_number"
+                    app:startIconTint="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_todaNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_56"
+                        android:background="@drawable/rounded_rect_grey"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="16"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/secondary_text" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_vehicle_capacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/vehicle_max_capacity"
+                    android:textColorHint="@color/textColor_alpha"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_16"
+                    app:boxCornerRadiusTopStart="@dimen/margin_16"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="3"
+                    app:counterTextColor="@color/colorAccent"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_toda_Number"
+                    app:startIconDrawable="@drawable/ic_crane_truck"
+                    app:startIconTint="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_vehicle_capacity"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_56"
+                        android:background="@drawable/rounded_rect_grey"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="3"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/secondary_text" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_vehicle_build"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/vehicle_build"
+                    android:textColorHint="@color/textColor_alpha"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_16"
+                    app:boxCornerRadiusTopStart="@dimen/margin_16"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="16"
+                    app:counterTextColor="@color/colorAccent"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_vehicle_capacity"
+                    app:startIconDrawable="@drawable/ic_crane_truck"
+                    app:startIconTint="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_vehicle_build"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_56"
+                        android:background="@drawable/rounded_rect_grey"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="16"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/secondary_text" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_vehicle_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/vehicle_model"
+                    android:textColorHint="@color/textColor_alpha"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_16"
+                    app:boxCornerRadiusTopStart="@dimen/margin_16"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="16"
+                    app:counterTextColor="@color/colorAccent"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_vehicle_build"
+                    app:startIconDrawable="@drawable/ic_delivery_truck"
+                    app:startIconTint="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_vehicle_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_56"
+                        android:background="@drawable/rounded_rect_grey"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="64"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/secondary_text" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_vehicle_regno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/driverId"
+                    android:textColorHint="@color/textColor_alpha"
+                    app:boxCornerRadiusTopEnd="@dimen/margin_16"
+                    app:boxCornerRadiusTopStart="@dimen/margin_16"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="16"
+                    app:counterTextColor="@color/colorAccent"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_vehicle_model"
+                    app:startIconDrawable="@drawable/ic_number"
+                    app:startIconTint="@color/colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_vehicle_regno"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_56"
+                        android:background="@drawable/rounded_rect_grey"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="16"
+                        android:textColor="@color/textColor"
+                        android:textColorHint="@color/secondary_text" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bt_submit_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/AppTheme.Button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_vehicle_regno" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <include
+                android:id="@+id/api_loading_screen"
+                layout="@layout/api_loading_screen"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

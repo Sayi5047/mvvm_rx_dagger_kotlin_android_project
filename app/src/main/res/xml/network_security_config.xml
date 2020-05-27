@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <!--STARPAY QA-->
+        <domain includeSubdomains="true">13.228.88.56</domain>
+        <!--STARPAY GREEN CHANNEL-->
+        <domain includeSubdomains="true">3.1.186.39</domain>
+        <!--STARPAY UAT-->
+        <domain includeSubdomains="true">3.1.104.251</domain>
+        <domain includeSubdomains="true">3.0.3.166</domain>
+
+<!--        <domain includeSubdomains="true">driverapi.bilidito.ph</domain>-->
+
+    </domain-config>
+
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="@raw/driver" />
+            <domain includeSubdomains="true">driverapi.bilidito.ph</domain>
+        </trust-anchors>
+
+    </base-config>
+</network-security-config>

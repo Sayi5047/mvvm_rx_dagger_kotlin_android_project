@@ -1,0 +1,330 @@
+<resources>
+    <string name="_70_inr">₱ 70 </string>
+    <string name="haldirams">HALDIRAMS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="completed_orders">Completed Orders</string>
+    <string name="FB_DRIVER_NODE">drivers</string>
+    <string name="john_doe">John Doe</string>
+    <string name="retailer">Retailer</string>
+    <string name="mobilenumber">MobileNumber</string>
+    <string name="StoreName">Store Name</string>
+    <string name="Address">Address</string>
+    <string name="vehicleNumber">Vehicle Number</string>
+    <string name="items">Items</string>
+    <string name="close">close</string>
+    <string name="daily_gulb_jamun">Daily Gulb_jamun</string>
+    <string name="Items">Items</string>
+    <string name="ORDERS">Orders</string>
+    <string name="License">License Number</string>
+    <string name="pick_up_order">Pick up Order</string>
+    <string name="deliver_order">Deliver Order</string>
+    <string name="login">Login</string>
+    <string name="dummy_password">starpay</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="dummy_number">7780187505</string>
+    <string name="dummy_number2">+631091010912</string>
+    <string name="logout">Logout</string>
+    <string name="Welcome"> Welcome </string>
+    <string name="Login">Login</string>
+    <string name="forgot_password">Forgot PIN?</string>
+    <string name="ok">OK</string>
+    <string name="API_CHECK_DRIVER__EXISTS_MESSAGE">Driver Already Exist</string>
+    <string name="enterpin">Please, Enter Your Pin To Login</string>
+    <string name="enterotp">Please, Enter OTP Here</string>
+    <string name="resendotp">Resend OTP?</string>
+    <string name="submit">Submit</string>
+    <string name="verify">Continue</string>
+    <string name="welcome">Welcome\nPlease, Enter Your Mobile Number</string>
+    <string name="NO_CONNECTION_ERROR">Connection unavailable</string>
+    <string name="TIMEOUT_ERROR">Took too long to respond</string>
+    <string name="AUTH_FAILURE_ERROR">Authorisation failed</string>
+    <string name="SERVER_ERROR">Unexpected Error  At Server</string>
+    <string name="NETWORK_ERROR">Network is\'nt working properly</string>
+    <string name="PARSE_ERROR">Invalid data parse error</string>
+    <string name="set_your_pin">Please, Set Your Pin Here</string>
+    <string name="no_internet">Network Connection unavailable..!!!</string>
+    <string name="ph_code" translatable="false">+63</string>
+    <string name="pin">Pin</string>
+    <string name="logging_you_in">Logging you in....</string>
+    <string name="hi_there_please_enter_your_personal_details">Hi, There Please Enter Your Personal Details</string>
+    <string name="lastname">Last Name</string>
+    <string name="Email">Email</string>
+    <string name="first_name">First Name</string>
+    <string name="update">Update</string>
+    <string name="re_enter_pin">Re Enter Pin</string>
+    <string name="email">Email</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">John Doe</string>
+    <string name="nav_header_subtitle">+917780187505</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="trips">Your Trips</string>
+    <string name="history">Trip History</string>
+    <string name="profile">Profile</string>
+    <string name="Current_trip">Current Trip</string>
+    <string name="online">Online</string>
+    <string name="support">Support</string>
+    <string name="earnings">My Income</string>
+    <string name="STATUS_CHANGED_TO_OFFLINE">Status Changed to Offline</string>
+    <string name="STATUS_CHANGED_TO_ONLINE">Status Changed to Online</string>
+    <string name="CURRENT_STATUS_IS_AVAILABLE">Status can not be changed while on trip</string>
+    <string name="Online">Online</string>
+    <string name="Offline">Offline</string>
+    <string name="Updating">Updating…</string>
+    <string name="fromRetailer">From Driver App</string>
+
+
+    <string name="supportText">StarPay Corporation \n
+    Customer Support Hotline \n\n
+        (02) 333-7827 \n
+    help@starpay.com.ph</string>
+    <string name="callHOtline">Call Hotline</string>
+    <string name="choose_a_number_to_call">Choose a number to call</string>
+    <string name="number1">09509867827</string>
+    <string name="number2">09217777722</string>
+    <string name="number3">09396000020</string>
+    <string name="number4">(02) 333–7827</string>
+    <string name="emailHOtline">Email us</string>
+    <string name="legal">Legal</string>
+    <string name="by_register_accept_tnc">By proceeding you accept to our terms and conditions</string>
+    <string name="verificationdocuments">Verification Documents</string>
+    <string name="documentsList">Submit documents for verification \n
+• Vehicle Permit\n
+• Commercial driving licence\n
+• Police verification/clearance certificate\n
+• Vehicle RC\n
+• Vehicle Insurance\n</string>
+    <string name="dummyAddress">FMCG ltd\n#34, 5main, Makati avenue,\nManila, 560 102.\n</string>
+    <string name="Navigation">Navigation</string>
+    <string name="you_are_offline_please_become_online_to_get_trip_request">Please go online</string>
+    <string name="looking_for_trip_request">Looking For trip request..</string>
+
+    <string name="default_notification_channel_id">5047</string>
+    <string name="changePin">Change Pin</string>
+    <string name="change_pin">Change Pin</string>
+    <string name="old_pin">Old Pin</string>
+    <string name="new_pin">New Pin</string>
+    <string name="PIN_SHOULD_BE_MORE">Enter Complete Pin</string>
+    <string name="PINS_NOT_MATCHING">Pins are not matching</string>
+    <string name="Old_new_pin_same">Old pin and New Pin are same</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="number_of_drops">Number of Drops</string>
+    <string name="number_of_pickups">Number of Pickups</string>
+    <string name="ignore">Ignore</string>
+    <string name="check_request_status">Check Status</string>
+    <string name="requested">Requested</string>
+    <string name="trip_1">Trip 1</string>
+    <string name="date_time_n31_07_2019_07_35_a_m"><![CDATA[Date & Time  31-07-2019 07:35 A.M]]></string>
+    <string name="start_trip">Start Trip</string>
+    <string name="cancel_trip">Cancel Trip</string>
+    <string name="completed">Completed</string>
+    <string name="trip_already_assigned">Sorry you missed the trip, we will assign a different trip</string>
+    <string name="Trip_assign_successfull">Trip SuccessFully Assigned</string>
+    <string name="go_to_trip">Go to Trip</string>
+    <string name="swipe_to_confirm_arrival">Arrived at pickup location</string>
+    <string name="yes">Yes</string>
+    <string name="alert">Confirm</string>
+    <string name="no">No</string>
+    <string name="confirm_trip">Do you confirm to start the Trip?</string>
+    <string name="confirm_delivery">You confirm the order has been delivered with all products ?</string>
+    <string name="confirm_pickup">You confirm the order has been pickedup with all products ?</string>
+    <string name="wayz_maps_url"><![CDATA[https://waze.com/ul?q={0},{1}&navigate=yes&zoom=17]]></string>
+    <string name="wayz_playstore_link">market://details?id=com.waze</string>
+    <string name="wayz_package_id">com.waze</string>
+    <string name="updating_the_trip">Updating the Trip</string>
+    <string name="updating_the_assigned_trip_status">Updating the Assigned Trip status</string>
+    <string name="TOda">TODA Region</string>
+    <string name="negative">Cancel</string>
+    <string name="positive">Proceed</string>
+    <string name="Packages">Packages</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="otp_sent_to_your_number">OTP sent to your number</string>
+    <string name="mobile_number_required">Mobile number required</string>
+    <string name="otp_is_required">OTP is required</string>
+    <string name="pins_are_not_matching">Pins are not matching</string>
+    <string name="Pin_is_requires">Pin is required</string>
+    <string name="old_pin_is_invalid">Old Pin is Invalid</string>
+    <string name="trip_comleted">Trip Completed</string>
+    <string name="current_trip">Current Trip</string>
+    <string name="trip_history">My Income</string>
+    <string name="no_trips_done_yet">No Trips Done yet</string>
+    <string name="store_name">Store name</string>
+    <string name="Wholesaler_name">Name</string>
+    <string name="THANKS_FOR_RREG">Thanks For Registration, Complete KYC and Start Earning</string>
+    <string name="pickup_successfull">Order Pickup Completed</string>
+    <string name="drop_successfull">Order Drop Completed</string>
+    <string name="deliverBefore">Deliver Before</string>
+    <string name="pickup_items">Pickup Items</string>
+    <string name="location_permission_unavailable">No Location Permission Available</string>
+    <string name="unable_to_enable_location">Unable to enable location.. Please enable it from Settings</string>
+    <string name="address">#2,First Floor,Aicobo Nagar  Udipi garden,Btm first stage  Bangalore,Karnataka</string>
+    <string name="register_from_playstore">You are not a Starpay customer yet. Please, Download Starpay consumer app from Google Play Store and register as a user and try again</string>
+    <string name="toda_region_required">Toda region Required</string>
+    <string name="lastname_required">LastName Required</string>
+    <string name="firstname_reqiured">FirstName Required</string>
+    <string name="select_your_zip_code">Please, Select your zip code</string>
+    <string name="region">Region</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="new_otp_has_been_sent">New OTP has been sent</string>
+    <string name="new_pin_has_been_sent">New PIN has been generated and sent to your registered mobile number .You can change your PIN in edit profile</string>
+    <string name="starpay_playstore_link_web">https://play.google.com/store/apps/details?id=ph.com.starpay.wallet</string>
+    <string name="starpay_market_link">market://details?id=ph.com.starpay.wallet</string>
+    <string name="PLEASE_WAIT_WHILE_WE_GET_PROVIENCE">Please, Wait while we get the list for you</string>
+    <string name="getting_provience_list">Getting Province List</string>
+    <string name="please_wait">Please, wait</string>
+    <string name="fakeDate">Date : 31-jul-2019 07:33 P.m</string>
+    <string name="payment_status">Payment Status : {0}</string>
+    <string name="tripdId">Trip : {0}</string>
+    <string name="TRIP_STATUS_COMPLETED">COMPLETED</string>
+    <string name="TRIP_STATUS_CANCELLED">CANCELLED</string>
+    <string name="TRIP_STATUS_ONGOING">ONGOING</string>
+    <string name="TRIP_DATE_TEMPLATE">Date : {0} To {1}</string>
+    <string name="DATE_TEMPLATE">Date : {0}</string>
+    <string name="PAYMENT_TEMPLATE">Amount : ₱ {0}</string>
+    <string name="retailer_already_exists">Number Already Registered as a Retailer. Please use Another Number</string>
+    <string name="invalid_creds">Invalid Credentials</string>
+    <string name="faq">\n
+        Q: How do I register? \n
+A: To Register as a driver you may apply to our Provincial Distributor \n\n\n
+Q: What are the Requirements? \n
+A: We require the following Data \n
+1. Valid Toda ID\n
+2. Professional License\n
+3. And Basic Registration through our Starpay Application\n\n\n
+Q: How do I earn as a Driver for Sakaydito? \n
+A: For every successful delivery you will earn 50PHP\n\n\n
+Q: Where does my earnings go? \n
+A: Your daily earnings will be transferred to your Starpay Wallet.
+    </string>
+    <string name="FAQ">FAQ (Frequently asked Questions)</string>
+    <string name="StarpayTermsLink">https://www.starpay.com.ph/bayadito-terms</string>
+    <string name="something_wrong_happened">Somethin Wrong Happened, Please Try Again</string>
+    <string name="unable_to_connect">Unable to Connect. Please retry again</string>
+    <string name="access_denied_for_unauthorised_user">Access denied for unauthorised user</string>
+    <string name="system_error">Something happened at our system. Please retry again</string>
+    <string name="system_under_mainteance">Our services are under maintenance, please try again</string>
+    <string name="mobile_field_hint">Enter you mobile number here</string>
+    <string name="password_field_hint">Enter your pin here</string>
+    <string name="or">OR</string>
+    <string name="sign_up_with_email">Signup with Mobile</string>
+    <string name="mobilenumber_length_invalid">Mobile number should be 10 digits</string>
+    <string name="pin_is_required">Pin mandatory for login</string>
+    <string name="invalid_pin_legth">Pin should be 6 digits</string>
+    <string name="welcome_to_sakaydito_please_use_your_mobile_number_to_login_or_register_and_start_earning">Welcome to Sakaydito. Please use your Mobile number to login or register and Start Earning</string>
+    <string name="please_enter_pin_to_login">Please enter your pin to login</string>
+    <string name="verify_">VERIFY</string>
+    <string name="fetching_profile">Fetching Profile Details</string>
+    <string name="in_code">+91</string>
+    <string name="please_enter_otp">OTP has been sent to your mobile number. Please submit otp to complete Sign Up procedure</string>
+    <string name="otp_field_hint">Enter your OTP here</string>
+    <string name="confirm_pin_hint">Re enter pin here to confirm</string>
+    <string name="go_to_login">Go to Login</string>
+    <string name="submitOtp">Submit OTP</string>
+    <string name="otp_legth_invalid">OTP should be 6 digits</string>
+    <string name="pin_length_invalid">Pin should be 6 Digits</string>
+    <string name="PIN_SHOULD_BE_SAME">Pins are not matching</string>
+    <string name="setpin_message">Please,Set your pin secure your account</string>
+    <string name="submitting_your_otp">Submitting your OTP</string>
+    <string name="Congratulations">Congratulations</string>
+    <string name="please_update_profile_details">You are almost done. Please provide us below details to complete and start earning</string>
+    <string name="firstname_hint">Enter First Name Here</string>
+    <string name="last_name_hint">Enter Last Name Here</string>
+    <string name="email_field_hint">Enter Your Email Here</string>
+    <string name="province_prompt">Select your Province</string>
+    <string name="zip_prompt">Select your city ZipCode</string>
+    <string name="FIRSTNAME_SHOULD_NOT_BE_EMPTY">First name required</string>
+    <string name="LAST_NAME_REQUIRED">Last name required</string>
+    <string name="EMAIL_REQUIRED">Email field required</string>
+    <string name="PROVINCE_REQUIRED">Province field mandatory</string>
+    <string name="ZIPCODE_REQUIRED">ZipCode field required</string>
+    <string name="PLEASE_WAIT_WHILE_WE_GIT_ZIP_CODES_FOR_YOUR_PROVINCE">Please, Wait while we get zip codes for your provinces</string>
+    <string name="INVALID_EMAIL">Invalid Email</string>
+    <string name="cannot_logout_while_busy">Cannot logout While on Trip. Please,Complete the trip to logout.</string>
+    <string name="unable_to_logout">Unable to logout. Please, try again.</string>
+    <string name="logging_you_out_msg">Logging you out from the app</string>
+    <string name="Logout">Logout</string>
+    <string name="Profile">Profile</string>
+    <string name="Loading_please_wait">Loading please wait</string>
+    <string name="we_require_your_permission">We require your permission</string>
+    <string name="we_need_access_to_your_gallery">We need access to your gallery to upload Profile Image</string>
+    <string name="DENY">Deny</string>
+    <string name="GRANT">Grant</string>
+    <string name="upload_pofile_ic_later">Please upload Profile image later</string>
+    <string name="access_required_to_open_gallery">Access required to Open Gallery</string>
+    <string name="uploading_image_to_servers">Uploading Image to Servers</string>
+    <string name="Firebae_upload_eror">Unable to upload image to Firebase</string>
+    <string name="pager_dummy_message">Pager Dummy Message</string>
+    <string name="home">Home</string>
+    <string name="more">More</string>
+    <string name="dummy_driver_name">Sayi Manoj Sugavasi</string>
+    <string name="we_need_access_to_your_location">Location access is required to get Trips and to complete them</string>
+    <string name="location_permission_mandatory">"Location Permission is Mandatory "</string>
+    <string name="we_need_access_of_bg_location">We need to access your location in the background to function properly. Please Provide them</string>
+    <string name="cancel">Cancel</string>
+    <string name="permit_manually">Permit Manually</string>
+    <string name="task_details">Task Details</string>
+    <string name="pickup">Pickup</string>
+    <string name="dummy_otp">Otp : 56269</string>
+    <string name="trip_id">Trip Id</string>
+    <string name="currently_no_trips_assigned">Currently No Trips Assigned. Refresh to see new updates</string>
+    <string name="congrats_you_are_on_a_trip">Congratulations..You are on a Trip</string>
+    <string name="pickup_confirm_ad_head">Pickup Confirm</string>
+    <string name="otp_invalid">Invalid OTP</string>
+    <string name="loading">Getting Status ....</string>
+    <string name="try_again">Try Again</string>
+    <string name="offline">Offline</string>
+    <string name="updating">Updating …</string>
+    <string name="you_are_online">You are online. lookout for new trip requests. Accept As soon as you receive them</string>
+    <string name="refresh">Refresh</string>
+    <string name="incoming_trip_request">Incoming Trip Request</string>
+    <string name="vehicle_plate_toda_number">Vehicle Registration/TODA Number</string>
+    <string name="dummy_number_plate">KA05 JR 5195</string>
+    <string name="vehicle_max_weight_capacity">Vehicle Max Weight Capacity</string>
+    <string name="dummy_capacity">7000 KG</string>
+    <string name="toda_region">TODA Region</string>
+    <string name="Dummy_region">BangKai</string>
+    <string name="pin_hould_not_be_same">Old pin should not be same as new pin</string>
+    <string name="error_occured_on_change_pin">Error Occurred unable to change pin now</string>
+    <string name="enter_old_pin">Enter Old Pin Here</string>
+    <string name="enter_new_pin_here">Enter your new pin here</string>
+    <string name="Pin_updated">Pin Updated Successfully</string>
+    <string name="vehicle_max_capacity">Vehicle Max Capacity in Kg (100 kg Max)</string>
+    <string name="you_are_rec">A new trip request available for you.\nPlease, Accept with in 30 seconds</string>
+    <string name="weekly_income">Weekly Income</string>
+    <string name="dummy_income">₱ 0.00</string>
+    <string name="total_income">Total Income</string>
+    <string name="vehicle_build">Vehicle Build</string>
+    <string name="vehicle_model">Vehicle Model</string>
+    <string name="VEHICLE_PLATE_NUMBER_REQUIRED">Vehicle Plate Number Required</string>
+    <string name="VEHICLE_CAP_REQUIRED">Enter your vehicle Capacity</string>
+    <string name="VEHICLE_VEHICLE_BUILD_REQUIRED">Enter your vehicle build</string>
+    <string name="VEHICLE_VEHICLE_MODEL_REQUIRED">Enter your vehicle Model</string>
+    <string name="VEHICLE_REG_NO_REQUIRED">Enter your vehicle registration number</string>
+    <string name="change">Change</string>
+    <string name="dummy_email">adrian@pupkinpie.com</string>
+    <string name="change_capacity">Change Vehicle Capacity</string>
+    <string name="enter_capacity_here">Enter vehicle capacity here</string>
+    <string name="invalid_capacity">Invalid capacity</string>
+    <string name="changed_capacity_successfully">Successfully changed Vehicle Capacity</string>
+    <string name="max_capacity_100">Max capacity 100 kg only</string>
+    <string name="busy">Busy</string>
+    <string name="status_can_not_be_changed_while_busy">Status Can not be changed while a trip is undergoing..</string>
+    <string name="swipe_to_refresh">Swipe Down To Refresh</string>
+    <string name="task_type">Task Type</string>
+    <string name="driverId">Driver Id</string>
+    <string name="profile_image_success">Profile Image Updated Successfully</string>
+    <string name="tripid_200">TripId # 200</string>
+    <string name="_12_kms">‎12 kms</string>
+    <string name="payment_status_paid">Payment Status : Paid</string>
+    <string name="app_vesion">Version : 1.1.1</string>
+    <string name="no_internet_connect_and_try">Network Connection lost . \n Connect to network and try again</string>
+    <string name="getting_status">Loading Status</string>
+    <string name="fromCustomer">from Customer</string>
+
+
+</resources>
+

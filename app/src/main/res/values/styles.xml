@@ -1,0 +1,100 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="drawerArrowStyle">@style/DrawerIconStyle</item>
+    </style>
+
+    <style name="EditTextDialog" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowEnterAnimation">@anim/slideup</item>
+        <item name="android:windowExitAnimation">@anim/slidedown</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Floating_EditTextDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">#22000000</item>
+        <item name="android:windowEnterAnimation">@anim/slideup</item>
+        <item name="android:windowExitAnimation">@anim/slidedown</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="text_headding_style">
+        <item name="android:textSize">@dimen/text_24</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="toolbar_text_headding_style">
+        <item name="android:textSize">@dimen/text_20</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="colorControlNormal">#000000</item>
+    </style>
+
+    <style name="SCBSWITCH" parent="Theme.MaterialComponents.Light">
+        <item name="colorControlActivated">#48D74D</item>
+        <item name="colorControlNormal">#EE3A58</item>
+        <item name="colorSwitchThumbNormal">#EE3A58</item>
+        <item name="android:colorForeground">#EE3A58</item>
+
+    </style>
+
+
+    <style name="DrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="text_color">@color/black</item>
+    </style>
+
+    <style name="AppTheme.Button_negative" parent="Widget.MaterialComponents.Button">
+        <item name="colorPrimary">@color/red_pink</item>
+        <item name="colorPrimaryDark">@color/red_pink</item>
+        <item name="colorAccent">@color/red_pink</item>
+        <item name="text_color">@color/white</item>
+    </style>
+
+    <style name="AppTheme.Button_ignore" parent="Widget.MaterialComponents.Button">
+        <item name="colorPrimary">@color/amber</item>
+        <item name="colorPrimaryDark">@color/amber</item>
+        <item name="colorAccent">@color/amber</item>
+        <item name="text_color">@color/white</item>
+    </style>
+
+    <style name="AppTheme.Button_positive" parent="Widget.MaterialComponents.Button">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="text_color">@color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_8"
+    android:layout_marginStart="@dimen/margin_8"
+    android:layout_marginEnd="@dimen/margin_8"
+    android:layout_gravity="center"
+    app:cardCornerRadius="@dimen/margin_4"
+    android:background="@color/bg"
+    android:padding="@dimen/padding_4">
+
+    <TextView
+        android:id="@+id/tripIdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trip #114092"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_18"
+        android:padding="@dimen/padding_4"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_4"
+        android:layout_marginTop="30dp">
+
+
+        <ImageView
+            android:id="@+id/statusIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:alpha="0.5"
+
+            android:src="@drawable/ic_trip_status"
+            android:tint="@android:color/black"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8" />
+
+        <TextView
+            android:id="@+id/status_tv"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/statusIcon"
+            android:layout_marginTop="@dimen/margin_8"
+            android:padding="@dimen/padding_4"
+            android:textColor="@color/colorAccent"
+            android:layout_marginStart="@dimen/margin_8"
+
+            android:text="@string/completed" />
+
+        <ImageView
+            android:id="@+id/taskIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:alpha="0.5"
+
+            android:src="@drawable/ic_tasks_clipboards"
+            android:layout_toEndOf="@id/status_tv"
+            android:tint="@android:color/black"
+            android:layout_marginTop="@dimen/margin_8" />
+
+        <TextView
+            android:id="@+id/tasks_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/taskIcon"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_8"
+            android:padding="@dimen/padding_4"
+            android:text="2 Tasks"
+            android:textColor="@color/colorAccent"
+
+            android:layout_marginStart="@dimen/margin_8" />
+
+        <ImageView
+            android:id="@+id/dateIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_calendar"
+            android:layout_below="@id/taskIcon"
+            android:padding="2dp"
+            android:alpha="0.5"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8" />
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/dateIcon"
+            android:layout_below="@id/taskIcon"
+            android:layout_marginTop="@dimen/margin_8"
+            android:padding="@dimen/padding_4"
+            android:text="31/07/1995"
+            android:textColor="@color/colorAccent"
+
+            android:layout_marginStart="@dimen/margin_8" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_timeline"
+            android:layout_below="@id/statusIcon"
+            android:layout_toEndOf="@id/date_tv"
+            android:alpha="0.5"
+
+            android:padding="2dp"
+            android:layout_marginTop="@dimen/margin_8" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/taskIcon"
+            android:layout_below="@id/statusIcon"
+            android:layout_marginTop="@dimen/margin_8"
+            android:padding="@dimen/padding_4"
+            android:textColor="@color/colorAccent"
+
+            android:text="02:33 Pm to 07:56 Pm"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8" />
+
+        <TextView
+            android:id="@+id/tripPaymentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/taskIcon"
+            android:layout_below="@id/statusIcon"
+            android:layout_marginTop="@dimen/margin_8"
+            android:padding="@dimen/padding_4"
+            android:textColor="@color/colorAccent"
+
+            android:text="02:33 Pm to 07:56 Pm"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8" />
+
+        <TextView
+            android:id="@+id/tripAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/taskIcon"
+            android:layout_below="@id/statusIcon"
+            android:layout_marginTop="@dimen/margin_8"
+            android:padding="@dimen/padding_4"
+            android:textColor="@color/colorAccent"
+
+            android:text="02:33 Pm to 07:56 Pm"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_8" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

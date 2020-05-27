@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="96dp"
+    android:background="@color/white"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/margin_36"
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:id="@+id/history_data_layout"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:background="@drawable/rounded_rect_full_white"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/drivername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toEndOf="@id/imageView"
+        android:text="@string/nav_header_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/driverMobileNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageView"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/drivername"
+        android:text="@string/nav_header_subtitle" />
+
+</RelativeLayout>

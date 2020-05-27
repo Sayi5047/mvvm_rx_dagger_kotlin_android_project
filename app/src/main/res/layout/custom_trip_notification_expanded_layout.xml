@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@android:color/white"
+    >
+
+    <TextView
+        android:id="@+id/head"
+        style="@style/TextAppearance.Compat.Notification.Title"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:background="@color/colorPrimaryDark"
+        android:padding="@dimen/padding_8"
+        android:text="@string/incoming_trip_request"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/message"
+        style="@style/TextAppearance.Compat.Notification.Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_margin="@dimen/margin_8"
+        android:textColor="@color/textColor"
+        android:layout_marginStart="@dimen/margin_8"
+        android:padding="@dimen/padding_4"
+        android:text="@string/you_are_rec"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image"
+        style="@style/TextAppearance.Compat.Notification.Media"
+
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/head"
+        android:layout_margin="@dimen/margin_8"
+        android:src="@drawable/ic_trip_status"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/message"
+        app:layout_constraintTop_toBottomOf="@id/head" />
+
+    <LinearLayout
+        style="@style/TextAppearance.Compat.Notification.Media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message"
+        android:layout_marginTop="@dimen/margin_8"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ignore_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_weight="1"
+            android:background="@color/amber"
+            android:text="@string/ignore"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:theme="@style/AppTheme.Button_ignore" />
+
+        <Button
+            android:id="@+id/reject_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_weight="1"
+            android:background="@color/red_pink"
+            android:text="@string/reject"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:theme="@style/AppTheme.Button_negative" />
+
+        <Button
+            android:id="@+id/accept_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:background="@color/colorPrimaryDark"
+            android:drawableStart="@color/disable_thumb_grey"
+            android:text="@string/accept"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:theme="@style/AppTheme.Button_positive" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
